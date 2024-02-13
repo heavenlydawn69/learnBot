@@ -2,7 +2,10 @@ import openai
 import os
 import json
 
-openai.api_key = "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"
+# Create a .env file and add api key to OPENAI_API_KEY
+# openai.api_key = os.getenv("OPENAI_API_KEY")
+
+openai.api_key = "Your_API_Key"
 
 messages = []
 
