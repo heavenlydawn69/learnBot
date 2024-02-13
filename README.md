@@ -127,7 +127,7 @@ The script requires the `openai` library for handling API requests. Additionally
 *   Error handling around the OpenAI API interactions is minimal. More robust exception management should be considered, especially for production use.
     
 
-**Please replace** `"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"` with your actual OpenAI API key, typically loaded from an environment variable for security. Never expose your API keys in version-controlled source code.
+**Please replace** `"Your_api_key"` with your actual OpenAI API key, typically loaded from an environment variable for security. Never expose your API keys in version-controlled source code.
 
 # learnBot Knowledge Base Documentation
 
