@@ -1,0 +1,56 @@
+{
+  "questions": [
+    {
+      "question": "Hello!",
+      "answer": "Hey there!"
+    },
+    {
+      "question": "hello mate!",
+      "answer": "Hey there!"
+    },
+    {
+      "question": "Who created you?",
+      "answer": "I was created by Ayush. He created me for the purpose of exploring knowledge. He is a very caring and gentle person."
+    },
+    {
+      "question": "Who is the developer of SpaceX?",
+      "answer": "SpaceX was developed by Elon Musk. Elon Musk co-founded SpaceX in 2002 with the aim of revolutionizing space technology and making humanity a multi-planetary species. As the CEO and lead designer, Musk has been heavily involved in the development of SpaceX's various rockets and spacecraft, including the Falcon 1, Falcon 9, Falcon Heavy, and the Crew Dragon spacecraft. Under Musk's leadership, SpaceX has achieved numerous milestones in space exploration, such as becoming the first privately-funded company to send a spacecraft to orbit Earth and successfully land reusable rockets."
+    },
+    {
+      "question": "hi",
+      "answer": "Hello there!"
+    },
+    {
+      "question": "hi",
+      "answer": "Hello! How can I assist you today?"
+    },
+    {
+      "question": "what is the most famous anime?",
+      "answer": "The answer to that question can be subjective as popularity can change over time. However, some of the most widely recognized and popular anime series include \"Dragon Ball Z,\" \"Naruto,\" \"One Piece,\" \"Attack on Titan,\" \"Death Note,\" \"Fullmetal Alchemist: Brotherhood,\" and \"Sailor Moon.\""
+    },
+    {
+      "question": "How to love somebody?",
+      "answer": "Loving somebody is a complex and deeply personal experience. While it may be different for everyone, here are some general steps you can follow to cultivate love for someone:\n\n1. Acceptance: Accept the person for who they are, including their flaws and imperfections. Recognize that no one is perfect, and love them unconditionally for who they are.\n\n2. Respect: Show respect for the person's beliefs, opinions, and boundaries. Treat them with kindness and consideration, and value their thoughts and feelings.\n\n3. Communication: Open and honest communication is essential for building love and understanding. Express yourself openly, actively listen to the other person, and work on understanding their perspective.\n\n4. Emotional availability: Be there for the person emotionally, offering support and empathy. Show genuine interest in their life, and be willing to share your own feelings and vulnerabilities.\n\n5. Trust: Establish trust by being reliable, keeping your promises, and demonstrating honesty and integrity. Trust is the foundation of any healthy relationship and is essential for love to thrive.\n\n6. Quality time: Spend quality time together, engaging in activities that both of you enjoy. This helps to build a strong connection and creates opportunities for shared experiences and deeper understanding.\n\n7. Mutual growth: Encourage each other to grow and develop as individuals. Support their goals and dreams, and celebrate their successes and achievements.\n\n8. Patience and understanding: Love requires patience and understanding, as no relationship is without challenges or disagreements. Practice forgiveness and compassion, and be willing to compromise and work through difficulties together.\n\nRemember that love is a continuous process and requires effort from both parties involved. It is a journey of learning, growing, and building a deep bond with another person."
+    },
+    {
+      "question": "Can you write me a code to get a system notification that battery health is low using python.",
+      "answer": "Certainly! Here's an example code that uses the `psutil` library in Python to check the battery health and display a system notification when it is low:\n\n```python\nimport psutil\nimport platform\nimport tkinter as tk\n\n# Function to display system notification\ndef show_notification(title, message):\n    if platform.system() == \"Darwin\":\n        # macOS notification\n        tk.Tk().withdraw()\n        tk.messagebox.showwarning(title, message)\n    elif platform.system() == \"Linux\":\n        # Linux notification (requires 'notify-send' command)\n        import subprocess\n        subprocess.Popen(['notify-send', title, message])\n    elif platform.system() == \"Windows\":\n        # Windows notification (requires 'win10toast' package)\n        from win10toast import ToastNotifier\n        toaster = ToastNotifier()\n        toaster.show_toast(title, message, duration=10)\n\n# Check battery health\nbattery = psutil.sensors_battery()\nif battery.percent < 30 and not battery.power_plugged:\n    show_notification(\"Low Battery\", \"Battery health is low. Please connect your charger.\")\n\n```\n\nMake sure you have the `psutil` library and, if you are using Windows, the `win10toast` library installed (`pip install psutil win10toast`).\n\nThis code checks if the battery health is below 30% and the device is not plugged in. If these conditions are met, it calls the `show_notification` function to display a system notification with the given title and message.\n\nNote: The code supports macOS, Linux, and Windows systems. However, for Linux, it assumes you have the `notify-send` command installed, usually provided by the `libnotify-bin` package in most distributions.\n\nFeel free to customize the title and message of the notification according to your preference."
+    },
+    {
+      "question": "hi",
+      "answer": "Hello! How can I assist you today?"
+    },
+    {
+      "question": "tell me the name of top 10 anime",
+      "answer": "Sure! The top 10 anime can vary depending on personal preferences, but here are some widely acclaimed and popular ones:\n\n1. \"Death Note\"\n2. \"Attack on Titan\"\n3. \"Fullmetal Alchemist: Brotherhood\"\n4. \"One Piece\"\n5. \"Naruto\"\n6. \"Dragon Ball Z\"\n7. \"Hunter x Hunter\"\n8. \"Steins;Gate\"\n9. \"Code Geass\"\n10. \"My Hero Academia\"\n\nThese are just a few examples, and there are many other great anime series out there. Let me know if there's any specific genre or type of anime you're interested in!"
+    },
+    {
+      "question": "I see, then which anime should be my first choice to watch",
+      "answer": "As a first choice, I would recommend starting with a widely acclaimed and beginner-friendly anime like \"Attack on Titan\" or \"Fullmetal Alchemist: Brotherhood.\" Both series have engaging storylines, well-developed characters, and are accessible to newcomers to the anime medium. If you prefer a more intense and action-packed anime, \"Attack on Titan\" would be a great choice. On the other hand, if you enjoy a blend of action, adventure, and a touch of fantasy, \"Fullmetal Alchemist: Brotherhood\" is highly recommended. Ultimately, the best choice depends on your personal preferences, so feel free to explore and enjoy the vast world of anime!"
+    },
+    {
+      "question": "How to write html in vscode",
+      "answer": "To write HTML in Visual Studio Code (VSCode), you can follow these steps:\n\n1. Open Visual Studio Code on your computer.\n2. Create a new file by selecting \"File\" in the menu bar, then \"New File\" (or using the shortcut `Ctrl + N` for Windows/Linux or `Cmd + N` for macOS).\n3. Save the file with an `.html` extension, for example, \"index.html\".\n4. Begin writing your HTML code within the file.\n\nHere's a basic structure to get you started:\n\n```html\n<!DOCTYPE html>\n<html>\n<head>\n    <title>My First HTML Page</title>\n</head>\n<body>\n    <h1>Hello, World!</h1>\n    <p>This is my first HTML page.</p>\n</body>\n</html>\n```\n\n5. As you type, VSCode will provide features like syntax highlighting and auto-completion for HTML tags and attributes, making it easier to write code.\n\n6. To preview the HTML file in a browser directly from VSCode, you can use the \"Live Server\" extension. Install the extension by going to the Extensions view (`Ctrl + Shift + X`), searching for \"Live Server\", and clicking the install button. Once installed, right-click on your HTML file and select \"Open with Live Server\". This will open the file in a browser, and any changes you make will be automatically refreshed.\n\nThat's it! You can now begin writing and exploring HTML in Visual Studio Code."
+    }
+  ]
+}
