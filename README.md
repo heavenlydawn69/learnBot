@@ -1,3 +1,5 @@
+theme: jekyll-theme-minimal
+
 # learnbot.py Documentation
 
 ## Overview
